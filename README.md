@@ -1,6 +1,6 @@
 ### Notes
 
-#### Page heirarchy
+#### Page hierarchy
 
 ```
     Index.js
