@@ -10,7 +10,7 @@ background: ${props =>
         41%,rgba(0,0,0,0.65)
         100%
     ),
-    url('${props.image}'), #f563e3`};
+    url('${props.image}')`};
     background-size: 100%, cover !important;
     background-position: top;
     width: 100%;
@@ -73,13 +73,14 @@ background: ${props =>
     }
 `;
 
-const HeroImage = ({image, title, text}) => {
+const HeroImage = ({image, title, text, release_date}) => {
     return (
         <StyledHeroImage image={image}>
             <div className="heroimage-content">
                 <div className="heroimage-text">
                     <h1>{title}</h1>
                     <p>{text}</p>
+                    <p>Release Date: {release_date}</p>
                 </div>
             </div>
         </StyledHeroImage>

@@ -32,6 +32,7 @@ const Home = () => {
                 image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.heroImage.backdrop_path}`}
                 title={state.heroImage.original_title}
                 text={state.heroImage.overview}
+                release_date={state.heroImage.release_date}
             />
             <SearchBar />
             <Grid />
