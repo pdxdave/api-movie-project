@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     API_URL,
     API_KEY,
@@ -17,9 +17,12 @@ import Spinner from './elements/Spinner'
 
 import {useHomeFetch} from './hooks/useHomeFetch'
 
+import NoImage from './images/no_image.jpg'
+
 const Home = () => {
 
     const [{state, loading, error} , fetchMovie] = useHomeFetch()
+    const {searchTerm, setSearchTerm} = useState('')
 
     console.log(state)
 
@@ -34,9 +37,14 @@ const Home = () => {
                 text={state.heroImage.overview}
                 release_date={state.heroImage.release_date}
             />
-            <SearchBar />
-            <Grid />
-            <MovieThumb />
+            <SearchBar/>
+
+            <Grid header={searchTerm ? 'Search Result' : 'Popular Movies'}>
+                {state.movies.map(movie => (
+                    <MovieThumb />
+                ))}
+            </Grid>
+
             <LoadMoreBtn />
             <Spinner />
         </React.Fragment>
