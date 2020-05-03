@@ -12,7 +12,7 @@ background: ${props =>
     ),
     url('${props.image}'), #f563e3`};
     background-size: 100%, cover !important;
-    background-position: center, center !important;
+    background-position: top;
     width: 100%;
     height: 600px;
     position: relative;

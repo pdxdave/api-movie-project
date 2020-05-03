@@ -12,7 +12,10 @@ const Header = () => {
                     <TicketLogo src={ticket} alt="ticket logo"/>
                 </Link>
                 <HeaderPhrase>
-                    <h1>Movie <span style={{color: 'red'}}>MADNESS</span></h1>
+                    <h1>
+                        <span style={{color: '#fff'}}>Movie </span>
+                        <span style={{color: 'red'}}>MADNESS</span>
+                    </h1>
                 </HeaderPhrase>
         </div>
     </TicketMaster>
@@ -22,7 +25,7 @@ const Header = () => {
 export default Header
 
 const TicketMaster = styled.div `
-    background: lightblue;
+    background: rgb(51, 52, 56);
     box-sizing: border-box;
     .ticket-wrapper {
         max-width: 1280px;
@@ -35,13 +38,15 @@ const TicketLogo = styled.img `
     width: 150px;
     @media screen and (max-width: 1300px){
         width: 100px;
-        padding-left: 20px;
+        padding-left: 50px;
     }
 `
 
 const HeaderPhrase = styled.div `
     float: right;
+    margin-top: 20px;
     @media screen and (max-width: 1300px){
-        padding-right: 20px;
+        padding-right: 50px;
+        margin-top: 0px;
     }
 `
