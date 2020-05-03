@@ -44,7 +44,7 @@ const TicketLogo = styled.img `
 
 const HeaderPhrase = styled.div `
     float: right;
-    margin-top: 20px;
+    margin-top: 15px;
     @media screen and (max-width: 1300px){
         padding-right: 50px;
         margin-top: 0px;
