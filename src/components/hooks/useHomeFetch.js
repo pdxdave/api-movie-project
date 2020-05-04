@@ -41,7 +41,7 @@ export const useHomeFetch = () => {
         // useEffect is passing the movieEndpoint to getMovies()
         useEffect(() => {
             fetchMovies(`${API_URL}movie/popular?api_key=${API_KEY}`)
-        }, []) // [] will just run once on mount
+        }, []) // [] will run once on mount, otherwise infinite loop
     
         return [{state, loading, error}, fetchMovies]
 }
