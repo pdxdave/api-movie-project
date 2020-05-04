@@ -31,4 +31,6 @@ We import a NoImage pic in the event there is no image to get from the API.
 
 We want to know if we are in "search" mode or not.  The default movies loaded will be known as "popular movies".  Movies returned as a search result will be known as "search result".  We use the useState() hook to monitor this.  We'll make a header prop in the Grid component using a ternary to handle this.
 
-Recall that we are bringing in the state to the Home page and that the movies are in a property called "movies".
+Recall that we are bringing in the state to the Home page and that the movies are in a property called "movies".  We can map through the movies in the Grid component and send them to the "MovieThumb" component.
+
+Inside the MovieThumb component we pass as props the key, a clickable prop which will be used for when we click on an image to take us to a new page, and finally we grab the image from the state. Notice that this is ternary.  If there is no image, we pull up a NoImage image.
